@@ -25,3 +25,10 @@ resource "google_compute_firewall" "allow_all" {
     ports    = ["0-65535"]
   }
 }
+
+resource "google_compute_subnetwork" "kubernetes-cluster--subnet" {
+  name          = "kubernetes-cluster--subnet"
+  ip_cidr_range = "10.1.0.0/24"
+  region        = var.region
+  network       = google_compute_network.vpc.id
+}
