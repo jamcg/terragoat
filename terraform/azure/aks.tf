@@ -33,3 +33,29 @@ resource azurerm_kubernetes_cluster "k8s_cluster" {
     yor_trace            = "6103d111-864e-42e5-899c-1864de281fd1"
   }
 }
+
+resource azurerm_kubernetes_cluster "k8s_cluster2" {
+  dns_prefix          = "terragoat2-${var.environment}"
+  location            = var.location
+  name                = "terragoat2-aks-${var.environment}"
+  resource_group_name = azurerm_resource_group.example.name
+  identity {
+    type = "SystemAssigned"
+  }
+  default_node_pool {
+    name       = "default2"
+    vm_size    = "Standard_D2_v2"
+    node_count = 2
+  }
+  addon_profile {
+    oms_agent {
+      enabled = false
+    }
+    kube_dashboard {
+      enabled = true
+    }
+  }
+  role_based_access_control {
+    enabled = false
+  }
+}
