@@ -44,7 +44,7 @@ resource "azurerm_network_interface" "ni_linux" {
   }
 }
 
-resource "azurerm_network_interface" "ni_win" {
+resource "azurerm_network_interface" "nic_win" {
   name                = "terragoat-win-${var.environment}"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
@@ -144,6 +144,5 @@ resource azurerm_network_watcher_flow_log "flow_log" {
     git_org              = "bridgecrewio"
     git_repo             = "terragoat"
     yor_trace            = "33a7212e-7f1a-49fc-af73-8e525c5546ec"
->>>>>>> 7a7eafc6e7ead15087ba8435ba993f581ea5c15f
   }
 }
