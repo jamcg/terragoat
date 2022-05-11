@@ -44,7 +44,7 @@ resource "azurerm_network_interface" "ni_linux" {
   }
 }
 
-resource "azurerm_network_interface" "nic_win" {
+resource "azurerm_network_interface" "ni_win" {
   name                = "terragoat-win-${var.environment}"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
