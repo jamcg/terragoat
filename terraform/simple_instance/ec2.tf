@@ -21,6 +21,7 @@ resource "aws_security_group" "ssh_traffic" {
     git_org              = "jamcg"
     git_repo             = "terragoat"
     yor_trace            = "0d04fa0f-e117-412b-bb3f-e104277ef9b9"
+    owner                = "smelotte"
   }
 }
 
@@ -38,6 +39,7 @@ resource "aws_instance" "web_server_instance" {
     git_org              = "jamcg"
     git_repo             = "terragoat"
     yor_trace            = "2286a96f-f1c8-4d2b-bc51-339d8aee766a"
+    owner                = "smelotte"
   }
 }
 
