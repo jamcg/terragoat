@@ -59,6 +59,7 @@ resource aws_vpc "eks_vpc" {
 }
 
 resource aws_subnet "eks_subnet1" {
+	# checkov:skip=807152304871829504_AWS_1641845546823: ADD REASON
   vpc_id                  = aws_vpc.eks_vpc.id
   cidr_block              = "10.10.10.0/24"
   availability_zone       = "${var.region}a"
