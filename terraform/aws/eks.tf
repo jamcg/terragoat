@@ -59,6 +59,7 @@ resource aws_vpc "eks_vpc" {
 }
 
 resource aws_subnet "eks_subnet1" {
+  # checkov:skip=807152304871829504_AWS_1641845546823: ADD REASON
   vpc_id                  = aws_vpc.eks_vpc.id
   cidr_block              = "10.10.10.0/24"
   availability_zone       = "${var.region}a"
@@ -67,12 +68,12 @@ resource aws_subnet "eks_subnet1" {
     Name                                            = "${local.resource_prefix.value}-eks-subnet"
     "kubernetes.io/cluster/${local.eks_name.value}" = "shared"
     }, {
-    git_commit                                       = "6e62522d2ab8f63740e53752b84a6e99cd65696a"
+    git_commit                                       = "0e8b9feff6b37a389f2fc4fa0d4b97193c109111"
     git_file                                         = "terraform/aws/eks.tf"
-    git_last_modified_at                             = "2021-05-02 11:16:31"
-    git_last_modified_by                             = "nimrodkor@gmail.com"
-    git_modifiers                                    = "nimrodkor"
-    git_org                                          = "bridgecrewio"
+    git_last_modified_at                             = "2022-06-15 09:53:38"
+    git_last_modified_by                             = "johnathanmcguigan@gmail.com"
+    git_modifiers                                    = "johnathanmcguigan/nimrodkor"
+    git_org                                          = "jamcg"
     git_repo                                         = "terragoat"
     "kubernetes.io/cluster/$${local.eks_name.value}" = "shared"
     yor_trace                                        = "1fb4fa23-a5d6-4d6a-b7dc-88749383f48d"
