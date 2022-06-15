@@ -55,12 +55,12 @@ resource "azurerm_network_interface" "ni_win" {
     private_ip_address_allocation = "Dynamic"
   }
   tags = {
-    git_commit           = "de3bb777f967989c2c3332faea16cb614c55ccc9"
+    git_commit           = "5e0993d4699361656ec453d92ccda3380c76875c"
     git_file             = "terraform/azure/networking.tf"
-    git_last_modified_at = "2020-06-17 15:48:15"
-    git_last_modified_by = "nimrodkor@gmail.com"
-    git_modifiers        = "nimrodkor"
-    git_org              = "bridgecrewio"
+    git_last_modified_at = "2022-05-11 09:42:53"
+    git_last_modified_by = "johnathanmcguigan@gmail.com"
+    git_modifiers        = "johnathanmcguigan/nimrodkor"
+    git_org              = "jamcg"
     git_repo             = "terragoat"
     yor_trace            = "2b5dbf28-04fb-4151-a637-a731bbe7ed1d"
   }

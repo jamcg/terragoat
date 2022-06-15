@@ -58,4 +58,14 @@ resource azurerm_kubernetes_cluster "k8s_cluster2" {
   role_based_access_control {
     enabled = false
   }
+  tags = {
+    git_commit           = "941e65b75e05910d62f61dd9e2572dee9e522b13"
+    git_file             = "terraform/azure/aks.tf"
+    git_last_modified_at = "2022-05-11 09:53:39"
+    git_last_modified_by = "johnathanmcguigan@gmail.com"
+    git_modifiers        = "johnathanmcguigan"
+    git_org              = "jamcg"
+    git_repo             = "terragoat"
+    yor_trace            = "9dddacda-aeff-4edf-9bfa-4d496c45ffe2"
+  }
 }
